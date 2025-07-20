@@ -1,28 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Camera Manual Vault</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        function unlockSite() {
-            const password = document.getElementById("password").value;
-            if (password === "vaultaccess") {
-                window.location.href = "home.html";
-            } else {
-                alert("Incorrect password. Try again.");
-            }
-        }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Camera Manual Vault</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="splash">
-    <div class="splash-container">
-        <img src="assets/logo.png" alt="Logo" class="logo"/>
-        <h1>Welcome to Camera Manual Vault</h1>
-        <p>The shutter’s closed for now — but not for long.</p>
-        <input type="password" id="password" placeholder="Enter password to unlock" />
-        <button onclick="unlockSite()">Enter</button>
-    </div>
+<body>
+  <div class="splash-container">
+    <h1>🔒 Welcome to Camera Manual Vault</h1>
+    <p>“The shutter’s closed for now — but not for long.”</p>
+    <p>Only VIPs (like you) can sneak a peek.</p>
+    <input type="password" id="passwordInput" placeholder="Enter Password" />
+    <button onclick="checkPassword()">Unlock</button>
+  </div>
+  <div id="home" style="display:none;">
+    <h1>Camera Manual Vault</h1>
+    <p>Welcome to the internal site!</p>
+    <img src="images/sample-camera.jpg" alt="Camera Sample" style="max-width:400px;">
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
