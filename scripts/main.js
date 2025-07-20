@@ -1,0 +1,1 @@
+// JS logic for home, password gate, etc.
