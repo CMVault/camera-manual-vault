@@ -1,12 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Camera Manual Vault</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Manual Vault</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function unlock() {
+            const pw = document.getElementById('password').value;
+            if (pw === 'letmetestthis') {
+                window.location.href = 'home.html';
+            } else {
+                alert('Incorrect password.');
+            }
+        }
+    </script>
 </head>
-<body>
-  <h1>Camera Manual Vault is Live</h1>
-  <p>Welcome — this will soon be the best place to find any manual you need.</p>
+<body class="splash">
+    <div class="container">
+        <img src="assets/logo.png" alt="Logo" class="logo">
+        <h1>🔒 Welcome to Camera Manual Vault</h1>
+        <p>The shutter’s closed for now — but not for long.<br>Only VIPs (like you) can sneak a peek.</p>
+        <input type="password" id="password" placeholder="Enter password to unlock" onkeydown="if(event.key==='Enter') unlock()">
+        <button onclick="unlock()">Go</button>
+    </div>
 </body>
 </html>
