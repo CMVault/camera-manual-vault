@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Camera Manual Vault</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function unlockSite() {
+            const password = document.getElementById("password").value;
+            if (password === "vaultaccess") {
+                window.location.href = "home.html";
+            } else {
+                alert("Incorrect password. Try again.");
+            }
+        }
+    </script>
+</head>
+<body class="splash">
+    <div class="splash-container">
+        <img src="assets/logo.png" alt="Logo" class="logo"/>
+        <h1>Welcome to Camera Manual Vault</h1>
+        <p>The shutter’s closed for now — but not for long.</p>
+        <input type="password" id="password" placeholder="Enter password to unlock" />
+        <button onclick="unlockSite()">Enter</button>
+    </div>
+</body>
+</html>
