@@ -1,1 +1,0 @@
-// Password gate script
