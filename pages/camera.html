@@ -20,32 +20,37 @@
 </header>
 <main>
   <h2>Explore Cameras</h2>
-  <div id="cameraList" class="camera-grid"></div>
+  <div class="camera-grid">
+
+    <div class="camera-card">
+      <img src="/images/canon_xl2.jpg" alt="Canon XL2" onerror="this.src='../assets/images/placeholder_vintage.svg'" />
+      <h3>Canon XL2</h3>
+      <p><strong>Year:</strong> 2004 | <strong>Type:</strong> DV Camcorder</p>
+      <p><strong>Media:</strong> MiniDV Tape</p>
+      <p><a href="/manuals/canon_xl2.pdf" target="_blank">Download Manual</a></p>
+      <p><em>Used On:</em> Survivor (Season 10), COPS</p>
+    </div>
+
+    <div class="camera-card">
+      <img src="/images/sony_fx3.jpg" alt="Sony FX3" onerror="this.src='../assets/images/placeholder_vintage.svg'" />
+      <h3>Sony FX3</h3>
+      <p><strong>Year:</strong> 2021 | <strong>Type:</strong> Full-frame Mirrorless Cinema</p>
+      <p><strong>Media:</strong> CFexpress Type A / SD</p>
+      <p><a href="/manuals/sony_fx3.pdf" target="_blank">Download Manual</a></p>
+      <p><em>Used On:</em> YouTube Creators, Indie Films</p>
+    </div>
+
+    <div class="camera-card">
+      <img src="/images/arri_alexa_mini.jpg" alt="ARRI Alexa Mini" onerror="this.src='../assets/images/placeholder_vintage.svg'" />
+      <h3>ARRI Alexa Mini</h3>
+      <p><strong>Year:</strong> 2015 | <strong>Type:</strong> Digital Cinema Camera</p>
+      <p><strong>Media:</strong> CFAST 2.0</p>
+      <p><a href="/manuals/arri_alexa_mini.pdf" target="_blank">Download Manual</a></p>
+      <p><em>Used On:</em> The Mandalorian, 1917, Stranger Things</p>
+    </div>
+
+  </div>
 </main>
 <footer><p>© 2025 Camera Manual Vault</p></footer>
-
-<script>
-fetch('../data/cameras.json')
-  .then(res => res.json())
-  .then(cameras => {
-    const container = document.getElementById('cameraList');
-    cameras.forEach(cam => {
-      const div = document.createElement('div');
-      div.className = 'camera-card';
-      div.innerHTML = `
-        <img src="${cam.image || '../assets/images/placeholder_vintage.svg'}" alt="${cam.model}" onerror="this.src='../assets/images/placeholder_vintage.svg'" />
-        <h3>${cam.model}</h3>
-        <p><strong>Year:</strong> ${cam.release_year} | <strong>Type:</strong> ${cam.type}</p>
-        <p><strong>Media:</strong> ${cam.media}</p>
-        <p><a href="${cam.manual_pdf}" target="_blank">Download Manual</a></p>
-        ${cam.used_on ? `<p><em>Used On:</em> ${cam.used_on.join(', ')}</p>` : ''}
-      `;
-      container.appendChild(div);
-    });
-  })
-  .catch(err => {
-    document.getElementById('cameraList').innerHTML = "<p>Error loading camera data.</p>";
-  });
-</script>
 </body>
 </html>
