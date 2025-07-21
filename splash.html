@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Camera Manual Vault - Access</title>
+  <style>
+    body { background-color: #111; color: #fff; font-family: sans-serif; text-align: center; padding-top: 20vh; }
+    input, button { padding: 10px; font-size: 16px; margin: 10px; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <h1>Enter Access Password</h1>
+  <input type="password" id="passInput" placeholder="Enter password" />
+  <button onclick="checkPass()">Enter</button>
+  <p id="error" style="color:red;"></p>
+  <script>
+    function checkPass() {
+      const entered = document.getElementById("passInput").value;
+      const real = atob("dmF1bHRwYXNz"); // 'vaultpass' obfuscated
+      if (entered === real) {
+        window.location.href = "index.html";
+      } else {
+        document.getElementById("error").textContent = "Incorrect password.";
+      }
+    }
+  </script>
+</body>
+</html>
