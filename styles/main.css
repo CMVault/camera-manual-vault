@@ -9,3 +9,27 @@ main { padding: 2em; text-align: center; }
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
+
+.camera-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 2em;
+}
+.camera-card {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1em;
+  width: 240px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.camera-card img {
+  width: 100%;
+  height: auto;
+  max-height: 140px;
+  object-fit: contain;
+  margin-bottom: 0.5em;
+}

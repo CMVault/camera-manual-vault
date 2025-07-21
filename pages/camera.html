@@ -1,5 +1,11 @@
+
 <!DOCTYPE html>
-<html><head><link rel="stylesheet" href="../styles/main.css"></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Camera List</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
 <body>
 <header>
   <h1>📷 Camera Manual Vault</h1>
@@ -12,6 +18,34 @@
     <a href="login.html">Login</a>
   </nav>
 </header>
-<main><h2>Camera Page</h2><p>Upload form + placeholder visible here.</p></main>
+<main>
+  <h2>Explore Cameras</h2>
+  <div id="cameraList" class="camera-grid"></div>
+</main>
 <footer><p>© 2025 Camera Manual Vault</p></footer>
-</body></html>
+
+<script>
+fetch('../data/cameras.json')
+  .then(res => res.json())
+  .then(cameras => {
+    const container = document.getElementById('cameraList');
+    cameras.forEach(cam => {
+      const div = document.createElement('div');
+      div.className = 'camera-card';
+      div.innerHTML = `
+        <img src="${cam.image || '../assets/images/placeholder_vintage.svg'}" alt="${cam.model}" onerror="this.src='../assets/images/placeholder_vintage.svg'" />
+        <h3>${cam.model}</h3>
+        <p><strong>Year:</strong> ${cam.release_year} | <strong>Type:</strong> ${cam.type}</p>
+        <p><strong>Media:</strong> ${cam.media}</p>
+        <p><a href="${cam.manual_pdf}" target="_blank">Download Manual</a></p>
+        ${cam.used_on ? `<p><em>Used On:</em> ${cam.used_on.join(', ')}</p>` : ''}
+      `;
+      container.appendChild(div);
+    });
+  })
+  .catch(err => {
+    document.getElementById('cameraList').innerHTML = "<p>Error loading camera data.</p>";
+  });
+</script>
+</body>
+</html>
