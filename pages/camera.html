@@ -1,55 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Camera List</title>
   <link rel="stylesheet" href="../styles/main.css" />
+  <script>
+    function filterCameras() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      document.querySelectorAll("#cameraList li").forEach(li => {
+        li.style.display = li.textContent.toLowerCase().includes(input) ? "" : "none";
+      });
+    }
+  </script>
 </head>
 <body>
 <header>
   <h1>📷 Camera Manual Vault</h1>
   <nav>
     <a href="../index.html">Home</a> |
-    <a href="camera.html">Cameras</a> |
-    <a href="quiz.html">Quiz</a> |
-    <a href="blog.html">Blog</a> |
-    <a href="compare.html">Compare</a> |
-    <a href="login.html">Login</a>
+    <a href="camera.html">Cameras</a>
   </nav>
 </header>
 <main>
-  <h2>Explore Cameras</h2>
-  <div class="camera-grid">
-
-    <div class="camera-card">
-      <img src="/images/canon_xl2.jpg" alt="Canon XL2" onerror="this.src='../assets/images/placeholder_vintage.svg'" />
-      <h3>Canon XL2</h3>
-      <p><strong>Year:</strong> 2004 | <strong>Type:</strong> DV Camcorder</p>
-      <p><strong>Media:</strong> MiniDV Tape</p>
-      <p><a href="/manuals/canon_xl2.pdf" target="_blank">Download Manual</a></p>
-      <p><em>Used On:</em> Survivor (Season 10), COPS</p>
-    </div>
-
-    <div class="camera-card">
-      <img src="/images/sony_fx3.jpg" alt="Sony FX3" onerror="this.src='../assets/images/placeholder_vintage.svg'" />
-      <h3>Sony FX3</h3>
-      <p><strong>Year:</strong> 2021 | <strong>Type:</strong> Full-frame Mirrorless Cinema</p>
-      <p><strong>Media:</strong> CFexpress Type A / SD</p>
-      <p><a href="/manuals/sony_fx3.pdf" target="_blank">Download Manual</a></p>
-      <p><em>Used On:</em> YouTube Creators, Indie Films</p>
-    </div>
-
-    <div class="camera-card">
-      <img src="/images/arri_alexa_mini.jpg" alt="ARRI Alexa Mini" onerror="this.src='../assets/images/placeholder_vintage.svg'" />
-      <h3>ARRI Alexa Mini</h3>
-      <p><strong>Year:</strong> 2015 | <strong>Type:</strong> Digital Cinema Camera</p>
-      <p><strong>Media:</strong> CFAST 2.0</p>
-      <p><a href="/manuals/arri_alexa_mini.pdf" target="_blank">Download Manual</a></p>
-      <p><em>Used On:</em> The Mandalorian, 1917, Stranger Things</p>
-    </div>
-
-  </div>
+  <h2>All Cameras (Alphabetical)</h2>
+  <input type="text" id="searchInput" oninput="filterCameras()" placeholder="Search cameras..." style="padding:0.5em;width:80%;max-width:400px;">
+  <ul id="cameraList"><li><a href='camera/arri-alexa-mini.html'>ARRI Alexa Mini</a></li>
+<li><a href='camera/canon-xl2.html'>Canon XL2</a></li>
+<li><a href='camera/sony-fx3.html'>Sony FX3</a></li></ul>
 </main>
 <footer><p>© 2025 Camera Manual Vault</p></footer>
 </body>
