@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enter Vault</title>
+  <script>
+    function checkPassword() {
+      var pw = document.getElementById("pw").value;
+      if (pw === "vaultpass") {
+        window.location.href = "/pages/home.html";
+      } else {
+        alert("Incorrect password.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>Enter the Vault</h2>
+  <input type="password" id="pw" placeholder="Enter Password">
+  <button onclick="checkPassword()">Enter</button>
+</body>
+</html>
