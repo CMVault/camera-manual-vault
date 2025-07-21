@@ -1,1 +1,1 @@
-// Placeholder content for scripts/main.js
+// JavaScript for search, filter, etc.

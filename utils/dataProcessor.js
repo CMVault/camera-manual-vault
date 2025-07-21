@@ -1,1 +1,1 @@
-// Placeholder content for utils/dataProcessor.js
+// Parses and loads camera data
