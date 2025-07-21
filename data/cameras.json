@@ -1,0 +1,45 @@
+[
+  {
+    "model": "Canon XL2",
+    "manufacturer": "Canon",
+    "release_year": 2004,
+    "type": "DV Camcorder",
+    "mount": "Canon 20x Zoom",
+    "media": "MiniDV Tape",
+    "manual_pdf": "/manuals/canon_xl2.pdf",
+    "image": "/images/canon_xl2.jpg",
+    "used_on": [
+      "Survivor (Season 10)",
+      "COPS"
+    ]
+  },
+  {
+    "model": "Sony FX3",
+    "manufacturer": "Sony",
+    "release_year": 2021,
+    "type": "Full-frame Mirrorless Cinema",
+    "mount": "E-Mount",
+    "media": "CFexpress Type A / SD",
+    "manual_pdf": "/manuals/sony_fx3.pdf",
+    "image": "/images/sony_fx3.jpg",
+    "used_on": [
+      "YouTube Creators",
+      "Indie Films"
+    ]
+  },
+  {
+    "model": "ARRI Alexa Mini",
+    "manufacturer": "ARRI",
+    "release_year": 2015,
+    "type": "Digital Cinema Camera",
+    "mount": "PL Mount",
+    "media": "CFAST 2.0",
+    "manual_pdf": "/manuals/arri_alexa_mini.pdf",
+    "image": "/images/arri_alexa_mini.jpg",
+    "used_on": [
+      "The Mandalorian",
+      "1917",
+      "Stranger Things"
+    ]
+  }
+]
