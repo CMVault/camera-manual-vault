@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Camera Manual Vault Login</title>
+  <style>
+    body { font-family: sans-serif; background-color: #111; color: #eee; text-align: center; padding-top: 100px; }
+    input, button { font-size: 16px; padding: 10px; margin: 10px; border-radius: 5px; }
+  </style>
+  <script>
+    function checkPassword() {
+      var pw = document.getElementById("pw").value;
+      if (pw === "vaultpass") {
+        window.location.href = "/pages/home.html";
+      } else {
+        alert("Incorrect password.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>Welcome to Camera Manual Vault</h2>
+  <p>Enter the password to continue:</p>
+  <input type="password" id="pw" placeholder="Enter Password">
+  <button onclick="checkPassword()">Enter</button>
+</body>
+</html>
