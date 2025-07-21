@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8" />
-  <title>Camera Manual Vault</title>
+  <title>Enter Vault</title>
   <link rel="stylesheet" href="/styles/main.css" />
 </head>
-<body class="splash-bg">
+<body class="splash-body">
   <div class="splash-container">
-    <h1>Camera Manual Vault</h1>
+    <h1>Welcome to Camera Manual Vault</h1>
     <p class="subtitle">Enter Password to Continue</p>
-    <input type="password" id="password" placeholder="Password" />
-    <button onclick="checkPassword()">Enter</button>
+    <input type="password" id="pw" placeholder="Password" />
+    <button onclick="check()">Enter</button>
     <p id="error" style="color:red;"></p>
   </div>
   <script>
-    function checkPassword() {
-      const pw = document.getElementById('password').value;
-      if (pw === "vaultpass") {
+    function check() {
+      if (document.getElementById("pw").value === "vaultpass") {
         window.location.href = "/pages/home.html";
       } else {
-        document.getElementById('error').innerText = "Incorrect password.";
+        document.getElementById("error").innerText = "Incorrect password.";
       }
     }
   </script>
