@@ -1,1 +1,1 @@
-console.log('Camera Manual Vault JS loaded');
+console.log('Main JS loaded.');
