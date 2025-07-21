@@ -19,7 +19,7 @@
       const entered = document.getElementById("passInput").value;
       const real = atob("dmF1bHRwYXNz"); // vaultpass
       if (entered === real) {
-        window.location.href = "pages/home.html";
+        window.location.href = "/pages/home.html";
       } else {
         document.getElementById("error").textContent = "Incorrect password.";
       }
