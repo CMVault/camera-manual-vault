@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Camera List</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <h1>All Cameras</h1>
+  <input type="text" id="search" placeholder="Search cameras..." onkeyup="filterList()" />
+  <ul id="cameraList">
+    <li><a href="cameras/Canon_C300.html">Canon C300</a></li>
+    <li><a href="cameras/Sony_FS7.html">Sony FS7</a></li>
+    <li><a href="cameras/Panasonic_GH5.html">Panasonic GH5</a></li>
+  </ul>
+  <script>
+    function filterList() {
+      let input = document.getElementById('search').value.toLowerCase();
+      let items = document.querySelectorAll('#cameraList li');
+      items.forEach(item => {
+        item.style.display = item.textContent.toLowerCase().includes(input) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

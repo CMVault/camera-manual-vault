@@ -7,7 +7,6 @@
   <style>
     body { background-color: #111; color: #fff; font-family: sans-serif; text-align: center; padding-top: 20vh; }
     input, button { padding: 10px; font-size: 16px; margin: 10px; }
-    .hidden { display: none; }
   </style>
 </head>
 <body>
@@ -18,9 +17,9 @@
   <script>
     function checkPass() {
       const entered = document.getElementById("passInput").value;
-      const real = atob("dmF1bHRwYXNz"); // 'vaultpass' obfuscated
+      const real = atob("dmF1bHRwYXNz"); // vaultpass
       if (entered === real) {
-        window.location.href = "index.html";
+        window.location.href = "pages/home.html";
       } else {
         document.getElementById("error").textContent = "Incorrect password.";
       }

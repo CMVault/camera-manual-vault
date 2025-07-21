@@ -1,1 +1,7 @@
-body { background: white; color: black; }
+
+body { font-family: Arial, sans-serif; padding: 2rem; background: #f9f9f9; color: #111; }
+input { padding: 8px; font-size: 1rem; width: 60%; max-width: 400px; }
+ul { list-style: none; padding: 0; }
+li { margin: 0.5rem 0; }
+a { text-decoration: none; color: #3366cc; }
+a:hover { text-decoration: underline; }
